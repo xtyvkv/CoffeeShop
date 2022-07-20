@@ -15,12 +15,13 @@ namespace CoffeeShop.Controllers
         }
         public IActionResult Index()
         {
+
             var newModel = new Models.Product();
             var productNameList = new List<string>();
             foreach (var currProduct in _CoffeeShopContext.Product)
                 productNameList.Add($"{currProduct.Name}");
             newModel.ProductNames = productNameList.ToArray();
-            return View(newModel);
+            return View();
         }
 
         public IActionResult Detail()
