@@ -19,7 +19,9 @@ namespace CoffeeShop.Controllers
             return View(productList);
             }
 
-        public IActionResult Detail()
+        public IActionResult Details()
+            // pass parameter here
+            // and put something in the view
         {
             return View();
         }
