@@ -7,17 +7,14 @@ namespace CoffeeShop.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private CoffeeShopContext _CoffeeShopContext;
 
-        public HomeController(ILogger<HomeController> logger, CoffeeShopContext newCoffeeShopContext)
+        public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
-            _CoffeeShopContext = newCoffeeShopContext;
         }
 
         public IActionResult Index()
         {
-            // var productCount = _CoffeeShopContext.Product.Count();
             return View();
         }
 
