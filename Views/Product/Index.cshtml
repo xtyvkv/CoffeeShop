@@ -1,4 +1,4 @@
-﻿@model CoffeeShop.Models.Product
+﻿@model CoffeeShop.Product[]
 
 @{
     ViewData["Title"] = "Product";
@@ -7,9 +7,9 @@
 <h1>Products</h1>
 <ul>
 @{
-    foreach (var currProduct in Models.Product)
+    foreach (var currProduct in Model)
     {
-        <li><a href="#">@currProduct</a></li>
+        <li><a href="/Details/?Id=@currProduct">@currProduct</a></li>
     }
 }
 </ul>
