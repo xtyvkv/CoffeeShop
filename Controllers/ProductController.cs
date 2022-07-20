@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using CoffeeShop.Models;
+using System.Collections.Generic;
 
 namespace CoffeeShop.Controllers
 {
@@ -19,7 +20,8 @@ namespace CoffeeShop.Controllers
             var productNameList = new List<string>();
             foreach (var currProduct in _CoffeeShopContext.Product)
                 productNameList.Add($"{currProduct.Name}");
-            return View(productNameList);
+            newModel.ProductNames = productNameList.ToArray();
+            return View(newModel);
         }
 
         public IActionResult Detail()
