@@ -21,11 +21,13 @@ namespace CoffeeShop.Controllers
 
         public IActionResult Details(int Id, string Name, string Description, double Price, string Category)
         {
+            ViewData["Id"] = Id;
             ViewData["Name"] = Name;
             ViewData["Description"] = Description;
             ViewData["Price"] = Price;
             ViewData["Category"] = Category;  
             return View();
+            // need to return view using Id
         }
     }
 }
