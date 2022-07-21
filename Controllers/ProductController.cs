@@ -20,9 +20,11 @@ namespace CoffeeShop.Controllers
             }
 
         public IActionResult Details(int Id, string Name, string Description, double Price, string Category)
-            // pass parameter here
-            // and put something in the view
         {
+            ViewData["Name"] = Name;
+            ViewData["Description"] = Description;
+            ViewData["Price"] = Price;
+            ViewData["Category"] = Category;  
             return View();
         }
     }
