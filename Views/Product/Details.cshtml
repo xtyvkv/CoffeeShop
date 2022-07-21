@@ -6,8 +6,7 @@
 
 
 <!--
-    display product with all details (id, name, description, price, category)
-    i understand the link format but have an error along the way the prevents me from properly building it out.
+    I'M GUNNA GET THIS!
 -->
 <h1>Details</h1>
 
@@ -19,7 +18,7 @@
             @Html.DisplayNameFor(model => model.Name)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Name)
+            @Html.Display(Model.Name)
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Description)
@@ -42,6 +41,5 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
     <a asp-action="Index">Back to List</a>
 </div>
