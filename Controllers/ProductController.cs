@@ -17,7 +17,7 @@ namespace CoffeeShop.Controllers
         {
             var productList = _CoffeeShopContext.Product.ToArray();
             return View(productList);
-            }
+        }
 
         public IActionResult Details(int Id, string Name, string Description, double Price, string Category)
         {
