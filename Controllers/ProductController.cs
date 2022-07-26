@@ -31,5 +31,19 @@ namespace CoffeeShop.Controllers
             }
             return View(product);
         }
+        // Display the form
+        public IActionResult Create()
+        {
+            return View();
+        }
+        // Process the form results
+        // Must specify POST!!
+        [HttpPost]
+        public IActionResult CreateSubmit(Product newProduct)
+        {
+            _CoffeeShopContext.Product.Add(newProduct);
+            _CoffeeShopContext.SaveChanges();
+            return Details(newProduct.Id);
+        }
     }
 }
