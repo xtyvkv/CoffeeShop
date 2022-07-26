@@ -5,11 +5,12 @@
 }
 
 <h1>Products</h1>
+<p>There are @Model.Length products.</p>
 <ul>
 @{
-    foreach (var currProduct in Model)
+    foreach (var currProduct in @Model)
     {
-        <li><a href="Details?Id=@currProduct.Id">@currProduct.Name</a></li>
+            <li><a href="Details?Id=@currProduct.Id">@currProduct.Name</a></li>
     }
 }
 </ul>
